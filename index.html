@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <i class="ri-html5-fill"></i>
+            <i class="ri-css3-fill"></i>
+            <i class="ri-reactjs-line"></i>
+            <i class="ri-npmjs-line"></i>
+            <i class="ri-database-2-line"></i>
+        </div>
+        <div class="c1">
+            <h1>Web Developers</h1>
+            <p>Here is your Id Card, which is designed by Dynamic JS with multiple functionality by <span> Single Event
+                    Listener</span></p>
+        </div>
+        <div class="rect">
+            <div class="cards">
+                <div class="image">
+                    <img src="https://media.istockphoto.com/photos/concept-metaphorically-depicting-hydrogen-as-an-ecological-energy-in-picture-id1340022435?b=1&k=20&m=1340022435&s=170667a&w=0&h=0ucvcbbU_jVcVYce70sMhPdColQRwlXTug6KjAhIsR4="
+                        alt="">
+                </div>
+                <!-- <button class="bt">More</button> -->
+
+                <div class="content">
+
+                    <h1>Amit Singh</h1>
+                    <p>Lorem ipsum dolor sit amet
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3>@CopyRight Reserve Key</h3>
+        </div>
+    </div>
+
+
+    <script>
+
+
+
+
+
+
+        var arr = [
+            { name: "Amit Singh", images: "/images/amit2.jpeg", about: "I am 22 year old", place: "Rewa", profile: "Full Stack Dev." },
+            { name: "Sumit Patel", images: "/images/a1.jpg", about: "I am 30 year old", place: "Bihar", profile: "Frontend Dev." },
+            { name: "Mohit Chaturvedi", images: "/images/a2.jpg", about: "I am 40 year old", place: "Satna", profile: "Mern Stack Dev." },
+            { name: "Arpit Rai", images: "/images/guy2.jpg", about: "I am 25 year old", place: "Bhopal", profile: "UI/UX Designer" },
+            { name: "Anand Prakash", images: "/images/a3.jpg", about: "I am 45 year old", place: "Indore", profile: "React Dev." },
+            { name: "Ravi Singh", images: "/images/guy1.jpg", about: "I am 30 year old", place: "Rewa", profile: "Angular Dev." },
+            { name: "Vimal Panday", images: "/images/a4.jpg", about: "I am 35 year old", place: "Gujrat", profile: "Graphic Designer" },
+            { name: "Shubham Singh", images: "/images/a5.jpg", about: "I am 42 year old", place: "Punjab", profile: "Frontend Developer" },
+            { name: "Vikash Patel", images: "/images/a6.jpg", about: "I am 22 year old", place: "Noida", profile: "Angular Dev." },
+            { name: "Rahul Singh", images: "/images/a7.jpg", about: "I am 28 year old", place: "Kashmir", profile: "React JS Dev." },
+            { name: "Nisha Agrawal", images: "/images/w1.jpg", about: "I am 18 year old", place: "Telangana", profile: "Animator" },
+            { name: "Keerti Singh", images: "/images/w2.jpg", about: "I am 55 year old", place: "Hyderabad", profile: "Graphic Designer" },
+            { name: "Gaurav Singh", images: "/images/a10.jpg", about: "I am 41 year old", place: "Chatarpur", profile: "Ui Designer" },
+            { name: "Abhishek Singh", images: "/images/a9.jpg", about: "I am 60 year old", place: "Sehore", profile: "JS Developer" },
+            { name: "Ramesh Pathoria", images: "/images/a11.jpg", about: "I am 32 year old", place: "Luckhnow", profile: "Software Testing" },
+            { name: "Kalidas Bhadwa", images: "/images/a12.jpg", about: "I am 33 year old", place: "Ujjain", profile: "React Native Dev." },
+            { name: "Chaman Chutiya", images: "/images/a13.jpg", about: "I am 26 year old", place: "Rampur", profile: "Frontend Dev" },
+            { name: "Niranjan Das", images: "/images/a8.jpg", about: "I am 19 year old", place: "Rewa", profile: "Full stack Dev." }
+
+
+
+        ]
+
+        clutter = ""
+        arr.forEach(myfunc)
+        function myfunc(val, i) {
+            clutter += `<div id=${i} class="cards">
+        <div class="image">
+            <img src="${val.images}" alt="">
+        </div>
+        <button data-height="250px" id=${i}  class="bt">More</button>
+        <div id=${i} class="content">
+        
+        <h1>${val.name}</h1>
+        <p>${val.about}</p>
+        <h5>Hey,<br> I am ${val.name} , from ${val.place} <br> <i class="ri-profile-fill"></i> ${val.profile}</h5>
+      </div>
+
+    </div>`
+
+
+
+        }
+
+        document.querySelector(".rect").innerHTML = clutter
+
+
+
+        var btn = document.querySelectorAll(".bt")
+        var content = document.querySelectorAll(".content")
+        var card = document.querySelectorAll(".cards")
+        var sweet = document.querySelector(".sweet")
+        var main = document.querySelector('.rect')
+        var flag = 0
+
+
+        btn.forEach(element => {
+            element.addEventListener("click", function (dets) {
+                card.forEach(element => {
+                    if (dets.target.id === element.id) {
+                        if (flag === 0) {
+                            dets.target.textContent = "Less"
+                            dets.target.style.backgroundColor = "yellow"
+
+
+                            element.style.height = "250px"
+                            content.forEach(elem => {
+                                if (dets.target.id === elem.id) {
+
+                                    setTimeout(() => {
+                                        elem.style.display = "block"
+
+                                    }, 300);
+                                }
+
+                            });
+                            flag = 1
+                        }
+                        else {
+                            dets.target.textContent = "More"
+                            dets.target.style.backgroundColor = "cyan"
+
+                            element.style.height = "100px"
+                            content.forEach(elem => {
+                                if (dets.target.id === elem.id) {
+                                    elem.style.display = "none"
+                                }
+
+                            });
+                            flag = 0
+                        }
+
+
+
+
+
+
+
+                        // 
+
+
+
+
+
+
+
+                    }
+
+                });
+            })
+        });
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

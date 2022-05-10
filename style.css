@@ -1,0 +1,159 @@
+body{
+    background-color: rgba(228, 218, 228, 0.986);
+    height: 100vh;
+    width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(206, 131, 239);
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+.nav{
+    position: fixed;
+    height: 7vh;
+    width: 50%;
+    border-radius: 4vw;
+background-color: rgb(43, 4, 70);
+display: flex;
+align-items: center;
+justify-content: space-around;
+
+}
+.cards {
+    color: white;
+    height: 100px;
+    width: 200px;
+    background:linear-gradient(180deg,rgb(180, 25, 152),black);
+    /* background-color: yellow; */
+    padding-top: 10px;
+    margin: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(24, 2, 30);
+    transition: all .5s ease-out;
+
+
+}
+
+.image {
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.rect {
+    display: flex;
+    flex-wrap: wrap;
+    /* padding-left: 30px; */
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.bt {
+    padding: 1px 10px;
+    color: rgb(17, 16, 16);
+    margin: 15px;
+    background-color: aqua;
+    cursor:pointer;
+    border-radius: 1vw;
+}
+.content{
+    margin-top: 0px;
+    display: none;
+    font-family:sans-serif;
+    margin-left: 15px;
+
+    
+   
+}
+.content p{
+    font-size: 15px;
+    margin-top: 10px;
+   
+}
+h1{
+    font-size: 20px;
+}
+h5{
+    margin-top: 10px;
+   width: 170px;
+   flex-wrap: wrap;
+   /* background-color: red; */
+}
+.ri-profile-fill{
+    color: yellow;
+    
+}
+.nav i{
+    font-size: 2.5vw;
+    color: white;
+}
+.nav i:nth-child(1){
+    color: orangered;
+}
+.nav i:nth-child(2){
+    color: blue;
+}
+.nav i:nth-child(3){
+    color: cyan;
+}
+.nav i:nth-child(4){
+    color: yellow;
+}
+.nav i:nth-child(5){
+    color: rgb(170, 142, 142);
+}
+.c1{
+    width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.c1 h1{
+    margin-top: 10vh;
+    font-size: 4vw;
+    font-family: "nunito";
+}
+.c1 p{
+    font-size: 2vw;
+    font-weight: 900;
+    font-family: "nunito";
+}
+.c1 p span{
+    color: rgb(38, 10, 178);
+}
+@media (max-width:600px) {
+    .nav{
+        height: 3vh;
+    }
+}
+.footer{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(35, 3, 65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+font-family: "nunito";}
